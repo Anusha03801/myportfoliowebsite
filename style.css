@@ -1010,64 +1010,90 @@ button:hover {
 
 
 /* ===== CONTACT SECTION MOBILE FIX ===== */
+/* ===== CONTACT SECTION SMALL SCREEN FIX ===== */
 @media (max-width: 768px) {
 
   #contact-section {
     padding: 60px 6%;
   }
 
-  .contact-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 30px 20px;
-    margin: auto;
-    border-radius: 18px;
-  }
-
-  .contact-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-  }
-
+  /* Main Card */
   .contact-card {
+    flex-direction: column;
     width: 100%;
-    max-width: 100%;
-    padding: 16px;
+    padding: 25px 18px;
+    gap: 30px;
+  }
+
+  /* Left Info */
+  .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* Info Boxes */
+  .info-box {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 14px;
-    box-sizing: border-box;
+    gap: 12px;
+    padding: 14px;
   }
 
-  .contact-card p,
-  .contact-card span {
+  .info-box strong {
     font-size: 14px;
     word-break: break-word;
   }
 
-  /* ICON FIX */
-  .contact-icon {
-    min-width: 45px;
-    height: 45px;
+  .info-box span {
+    font-size: 12px;
+  }
+
+  /* Icons */
+  .info-box .icon {
+    min-width: 42px;
+    height: 42px;
     font-size: 18px;
   }
 
-  /* SOCIAL ICONS FIX */
-  .social-icons {
-    display: flex;
+  /* Social Icons */
+  .socials {
     justify-content: center;
-    gap: 18px;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
-  .social-icons a {
+  .social {
     width: 45px;
     height: 45px;
     font-size: 18px;
   }
+
+  /* Right Form */
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form form {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 15px;
+  }
 }
+
 
 .footer {
   background: linear-gradient(135deg, #1c2b3a, #2c3e50);
