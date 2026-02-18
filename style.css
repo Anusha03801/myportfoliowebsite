@@ -180,6 +180,27 @@ header.sticky {
   }
 }
 
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 0;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    top: 70px; /* below header */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
+
 /*----home section----*/
 #home{
     min-height: 100vh;
@@ -1159,24 +1180,71 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .footer-nav {
-    position: absolute;
-    top: 85px;
-    right: 30px;
-    background: #1f2933;
-    flex-direction: column;
-    padding: 18px 22px;
-    border-radius: 10px;
-    display: none;
-    gap: 18px;
+/* ===== FOOTER MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 15px 0;
   }
 
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+  }
+
+  /* Left (Logo + Name) */
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .footer-name {
+    font-size: 15px;
+  }
+
+  /* Mobile Menu Icon */
+  .footer-menu {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Hide nav by default */
+  .footer-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 55px;
+    right: 16px;
+    width: 90%;
+    background: #1f2a44;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 999;
+  }
+
+  /* Show when active */
   .footer-nav.active {
     display: flex;
   }
 
-  .footer-menu {
-    display: block;
+  .footer-nav a {
+    color: white;
+    font-size: 15px;
   }
+
 }
+
