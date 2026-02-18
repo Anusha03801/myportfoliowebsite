@@ -134,72 +134,70 @@ header.sticky {
 .nav-links a:hover::after {
   width: 100%;
 }
-
-/* Mobile Styling (Small Screens) */
+/* ===== NAVBAR MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 16px;
+    height: 70px;
+  }
+
+  /* Show hamburger */
   .menu-toggle {
     display: block;
     cursor: pointer;
   }
 
   .bar {
-    display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
-    background-color: black;
+    background-color: #000;
+    margin: 5px 0;
     transition: all 0.3s ease;
   }
 
-  /* The Menu Drawer */
+  /* Hide menu by default */
   .nav-links {
-    display: none; /* Hidden by default on mobile */
-    flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 20px;
-    background: white;
-    width: 90%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    z-index: 100;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 0;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 999;
   }
 
-  /* Show menu when active class is added by JS */
+  /* Show menu */
   .nav-links.active {
     display: flex;
   }
 
-  .contact-btn {
-    background: #9d94eb; /* Match your screenshot color */
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: white !important;
-  }
-}
-
-@media (max-width: 768px) {
-
-  header {
-    padding: 15px 0;
-  }
-
-  .navbar {
-    padding: 0 20px;
-  }
-
-  .nav-links {
-    top: 70px; /* below header */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .nav-links li {
-    margin: 15px 0;
+    margin: 0;
   }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* Contact button style */
+  .contact-btn {
+    background: #9d94eb;
+    padding: 10px 22px;
+    border-radius: 8px;
+    color: #fff !important;
+  }
+
 }
+
+
 
 /*----home section----*/
 #home{
